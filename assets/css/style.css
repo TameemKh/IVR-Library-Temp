@@ -111,8 +111,8 @@ body {
 }
 
 .logo img{
-    width: 44px;
-    height: 54px;
+    width: 120px; 
+    height: auto; 
     margin-left: 10px;
 }
 
@@ -331,14 +331,14 @@ body {
     }
 
     .logo {
-    width: auto;
-    height: 40px;
+    width: 120px; 
+    height: auto; 
     margin-left: 10px;
     }
 
     .logo svg {
-        height: 100%;
-        width: auto;
+        width: 120px; 
+        height: auto; 
     }
 
 
