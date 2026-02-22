@@ -678,7 +678,7 @@ body {
 }
 
 .sectionss {
-  background: var(--color-secondary);
+  background: var(--color-bg);
 }
 @media (min-width: 768px) {
   .sectionss .container {
