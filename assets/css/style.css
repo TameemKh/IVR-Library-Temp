@@ -129,8 +129,8 @@ body {
 }
 
 .logo svg{
-    width: 44px;
-    height: 54px;
+    width: 120px; 
+    height: auto; 
     margin-left: 10px;
 }
 
