@@ -743,7 +743,7 @@ body {
 
 .cards {
     margin: 20px 45px;
-    background: linear-gradient(135deg, var(--color-bg), var(--color-secondary));
+    background: var(--color-bg);
 }
 
 .card {
