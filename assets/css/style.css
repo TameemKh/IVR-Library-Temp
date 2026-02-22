@@ -109,6 +109,10 @@ body {
     box-shadow: 0 0 8px var(--color-shadow);
 }
 
+.nav-left .contact-button {
+    color: #fff;
+}
+
 .logo img{
     width: 120px; 
     height: auto; 
