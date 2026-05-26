@@ -36,6 +36,14 @@ async function loadNavbar() {
   });
 
   placeholder.replaceWith(navbar);
+
+  const updateNavbarHeight = () => {
+    document.documentElement.style.setProperty("--navbar-height", `${navbar.offsetHeight}px`);
+  };
+
+  updateNavbarHeight();
+  document.body.classList.add("navbar-loaded");
+  window.addEventListener("resize", updateNavbarHeight);
 }
 
 function initNavbar() {
