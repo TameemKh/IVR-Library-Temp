@@ -19,15 +19,23 @@ async function loadNavbar() {
     throw new Error(`Unable to load navbar from ${navbarUrl}`);
   }
 
-  placeholder.innerHTML = await response.text();
+  const template = document.createElement("template");
+  template.innerHTML = await response.text();
+  const navbar = template.content.firstElementChild;
 
-  placeholder.querySelectorAll("[data-nav-link]").forEach(link => {
+  if (!navbar) {
+    return;
+  }
+
+  navbar.querySelectorAll("[data-nav-link]").forEach(link => {
     link.href = new URL(link.dataset.navLink, projectRoot).href;
   });
 
-  placeholder.querySelectorAll("[data-nav-src]").forEach(asset => {
+  navbar.querySelectorAll("[data-nav-src]").forEach(asset => {
     asset.src = new URL(asset.dataset.navSrc, projectRoot).href;
   });
+
+  placeholder.replaceWith(navbar);
 }
 
 function initNavbar() {
